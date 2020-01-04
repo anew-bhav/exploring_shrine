@@ -9,6 +9,7 @@ gem 'pg', '>= 0.18', '< 2.0'
 gem 'puma', '~> 4.1'
 gem 'rails', '~> 6.0.1'
 gem 'shrine', '~> 3.2.0'
+gem 'sidekiq', '~> 6.0.4'
 
 
 group :development, :test do
