@@ -1,7 +1,8 @@
 require 'image_processing/mini_magick'
-require_relative '../workers/profile_image_promote_job.rb'
 
 class ProfileImageUploader < Shrine
+
+  plugin :derivatives
 
   Attacher.validate do
     validate_max_size 5 * 1024 * 1024
@@ -19,7 +20,5 @@ class ProfileImageUploader < Shrine
     }
   end
 
-  Attacher.promote_block do
-    ::ProfileImagePromoteJob.perform_async(self.class.name, record.class.name, record.id, name, file_data)
-  end
+
 end

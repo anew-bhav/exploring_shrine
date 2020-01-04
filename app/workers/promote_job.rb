@@ -1,4 +1,4 @@
-class ProfileImagePromoteJob
+class PromoteJob
   include Sidekiq::Worker
 
   def perform(attacher_class, record_class, record_id, name, file_data)
