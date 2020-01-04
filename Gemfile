@@ -10,6 +10,7 @@ gem 'puma', '~> 4.1'
 gem 'rails', '~> 6.0.1'
 gem 'shrine', '~> 3.2.0'
 gem 'sidekiq', '~> 6.0.4'
+gem 'streamio-ffmpeg'
 
 
 group :development, :test do
