@@ -3,10 +3,6 @@ require_relative '../workers/profile_image_promote_job.rb'
 
 class ProfileImageUploader < Shrine
 
-  plugin :determine_mime_type
-  plugin :derivatives
-  plugin :backgrounding
-
   Attacher.validate do
     validate_max_size 5 * 1024 * 1024
     validate_mime_type %w[image/jpeg image/png image/webp]
